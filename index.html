@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Novo Usuario - luiz </title>
+</head>
+
+<body>
+
+    <div class="container">
+        <section class="header">
+            <h2>Nova Conta</h2>
+        </section>
+
+        <div class="flutuar">
+            <form id="form" class="form">
+                <div class="form-content">
+                    <label for="username">Nome do Usuario</label>
+                    <input required onclick="checkInputUsername()" type="text" autocomplete="off" id="username"
+                        placeholder="digite o nome do usuario">
+                </div>
+
+                <div class="form-content">
+                    <label for="email">Email do Usuario</label>
+                    <input required type="email" id="email" placeholder="digite o seu email">
+                </div>
+
+                <div class="form-content">
+                    <label for="password">Senha</label>
+                    <input minlength="8" maxlength="20" required type="password" id="password"
+                        placeholder="digite a sua senha">
+                </div>
+
+                <div class="form-content">
+                    <label for="password-confirmation">Confirmação de Senha</label>
+                    <input required minlength="8" maxlength="20" type="password" id="password-confirmation"
+                        placeholder="digite a sua senha novamente">
+                </div>
+
+
+                <button id="cadastro" onclick="cadastrado()">
+                    Registrar
+                    <div id="clip">
+                        <div id="leftTop" class="corner"></div>
+                        <div id="rightBottom" class="corner"></div>
+                        <div id="rightTop" class="corner"></div>
+                        <div id="leftBottom" class="corner"></div>
+                    </div>
+                    <span id="rightArrow" class="arrow"></span>
+                    <span id="leftArrow" class="arrow"></span>
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

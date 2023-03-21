@@ -1,0 +1,263 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+:root {
+    --font1: sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: var(--font1);
+}
+
+body {
+    background-image: linear-gradient(to top, rgb(26, 0, 32), rgb(41, 0, 59));
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+    background-color: #fafafa;
+    border-radius: 12px;
+    margin: 14px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0px 3px 5px rgba(0, 0, 1, 0.527);
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(120deg, rgb(113, 0, 158), rgb(105, 0, 91));
+    padding: 25px;
+    text-align: center;
+    color: white;
+}
+
+.form {
+    padding: 18px;
+}
+
+
+.form-content {
+    margin-bottom: 8px;
+    padding-bottom: 18px;
+    position: relative;
+
+}
+
+.form-content label {
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+.form-content input {
+    border: none;
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    padding: 8px;
+
+}
+
+.form-content a {
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    visibility: hidden;
+}
+
+.form-content input:focus {
+    color: rgba(162, 0, 255, 0.733);
+    background-color: #ffffff;
+    outline-color: rgba(162, 0, 255, 0.658);
+    box-shadow: -3px -3px 15px rgba(162, 0, 255, 0.616);
+    transition: .1s;
+    transition-property: box-shadow;
+}
+
+
+
+button {
+    cursor: pointer;
+    margin-left: 33%;
+    position: relative;
+    width: 14em;
+    height: 5em;
+    outline: none;
+    transition: 0.1s;
+    background-color: transparent;
+    border: none;
+    font-size: 13px;
+    font-weight: bold;
+    color: #000000;
+}
+
+#clip {
+    --color: #a427c3;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border: 5px double var(--color);
+    box-shadow: inset 0px 0px 15px #4a006d;
+    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+.arrow {
+    position: absolute;
+    transition: 0.2s;
+    background-color: #8a27c3;
+    top: 35%;
+    width: 11%;
+    height: 30%;
+}
+
+#leftArrow {
+    left: -13.5%;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 50%);
+}
+
+#rightArrow {
+    -webkit-clip-path: polygon(100% 49%, 0 0, 0 100%);
+    left: 102%;
+}
+
+button:hover #rightArrow {
+    background-color: #c327a9;
+    left: -15%;
+    animation: 0.6s ease-in-out both infinite alternate rightArrow8;
+}
+
+button:hover #leftArrow {
+    background-color: #8a27c3;
+    left: 103%;
+    animation: 0.6s ease-in-out both infinite alternate leftArrow8;
+}
+
+.corner {
+    position: absolute;
+    width: 4em;
+    height: 4em;
+    background-color: #a927c3;
+    box-shadow: inset 1px 1px 8px #7d27c3;
+    transform: scale(1) rotate(45deg);
+    transition: 0.2s;
+}
+
+#rightTop {
+    top: -1.98em;
+    left: 91%;
+}
+
+#leftTop {
+    top: -1.96em;
+    left: -3.0em;
+}
+
+#leftBottom {
+    top: 2.10em;
+    left: -2.15em;
+}
+
+#rightBottom {
+    top: 45%;
+    left: 88%;
+}
+
+button:hover #leftTop {
+    animation: 0.1s ease-in-out 0.05s both changeColor8,
+        0.2s linear 0.4s both lightEffect8;
+}
+
+button:hover #rightTop {
+    animation: 0.1s ease-in-out 0.15s both changeColor8,
+        0.2s linear 0.4s both lightEffect8;
+}
+
+button:hover #rightBottom {
+    animation: 0.1s ease-in-out 0.25s both changeColor8,
+        0.2s linear 0.4s both lightEffect8;
+}
+
+button:hover #leftBottom {
+    animation: 0.1s ease-in-out 0.35s both changeColor8,
+        0.2s linear 0.4s both lightEffect8;
+}
+
+button:hover .corner {
+    transform: scale(1.25) rotate(45deg);
+}
+
+button:hover #clip {
+    animation: 0.2s ease-in-out 0.55s both greenLight8;
+    --color: #7827c3;
+}
+
+@keyframes changeColor8 {
+    from {
+        background-color: #9227c3;
+    }
+
+    to {
+        background-color: #8a27c3;
+    }
+}
+
+@keyframes lightEffect8 {
+    from {
+        box-shadow: 1px 1px 5px #8527c3;
+    }
+
+    to {
+        box-shadow: 0 0 2px #6b27c3;
+    }
+}
+
+@keyframes greenLight8 {
+    from {}
+
+    to {
+        box-shadow: inset 0px 0px 32px #9727c3;
+    }
+}
+
+@keyframes leftArrow8 {
+    from {
+        transform: translate(0px);
+    }
+
+    to {
+        transform: translateX(10px);
+    }
+}
+
+@keyframes rightArrow8 {
+    from {
+        transform: translate(0px);
+    }
+
+    to {
+        transform: translateX(-10px);
+    }
+}
+
+
+@media (max-width:430px) {
+    #cadastro {
+        margin-left: 22%;
+    }
+}
+
+@media (max-width:384px) {
+    #cadastro {
+        margin-left: 20%;
+    }
+}
