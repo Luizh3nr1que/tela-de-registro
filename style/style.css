@@ -69,7 +69,7 @@ body {
 }
 
 .form-content input {
-    background-color: rgb(24, 24, 24);
+    background: transparent;
     border: none;
     display: block;
     width: 100%;
@@ -79,23 +79,33 @@ body {
 
 }
 
-.form-content a {
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    visibility: hidden;
+
+input[type="text"]:focus,
+textarea:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    transition: border-bottom 0.5s ease, outline 0.5s ease;
 }
 
-.form-content input:focus {
-    color: rgb(255, 255, 255);
-    background-color: #181818;
-    outline: none;
-    border: none;
-    box-shadow: -3px -3px 15px rgb(247, 0, 255);
-    transition: .1s;
-    transition-property: box-shadow;
-    border: none;
+input[type="text"]:focus {
+    border-color: #4586ff;
 }
+
+input[type="email"]:focus {
+    border-color: #4d8bff;
+}
+
+input[type="password"]:focus {
+    border-color: #da23ff;
+}
+
+
+
+
+
+
 
 
 .btn {
