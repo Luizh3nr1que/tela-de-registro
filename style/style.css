@@ -28,9 +28,9 @@ body {
 
 .container {
     background: linear-gradient(to top, rgb(113, 0, 158), rgb(193, 35, 255));
-    border-radius: 12px;
+    border-radius: 25px;
     margin: 14px;
-    max-width: 600px;
+    max-width: 500px;
     width: 100%;
     box-shadow: 0px 3px 5px rgba(0, 0, 1, 0.527);
     overflow: hidden;
@@ -55,6 +55,10 @@ body {
     padding-bottom: 18px;
     position: relative;
 
+}
+
+.form-content input::placeholder {
+    color: rgb(187, 99, 209);
 }
 
 .form-content label {
@@ -121,32 +125,14 @@ body {
     box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px;
 }
 
-.register-with-google {
-    color: blueviolet;
-    display: inline-block;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 4px;
-    text-align: center;
+.register {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
     display: block;
-    width: 50%;
-    margin: 20px auto;
+    margin-top: 20px;
+}
+
+.register:hover {
+    text-decoration: underline;
     cursor: pointer;
-    transition-duration: 1s;
-    transition-property: border-top,
-}
-
-.register-with-google img {
-    width: 30px;
-    vertical-align: middle;
-}
-
-.register-with-google:hover {
-    border-top: 1px solid blueviolet;
-    border-left: 1px solid blueviolet;
-    border-bottom: 1px solid rgb(238, 103, 238);
-    border-right: 1px solid rgb(238, 103, 238);
-    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px;
 }
